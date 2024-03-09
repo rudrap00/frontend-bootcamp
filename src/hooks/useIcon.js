@@ -1,23 +1,39 @@
+import {
+  Analytics,
+  Appearance,
+  Audience,
+  Delivery,
+  Discounts,
+  Home,
+  Orders,
+  Payments,
+  Plugins,
+  Products,
+  Tools,
+} from "../assets/index";
+
 export const useIcon = (route) => {
-  let icon = "";
-
-  if (route === "Products") {
-    icon = "qr_code";
+  if (route === "Home") {
+    return Home;
+  } else if (route === "Orders") {
+    return Orders;
+  } else if (route === "Products") {
+    return Products;
   } else if (route === "Delivery") {
-    icon = "local_shipping";
+    return Delivery;
+  } else if (route === "Analytics") {
+    return Analytics;
+  } else if (route === "Payments") {
+    return Payments;
   } else if (route === "Tools") {
-    icon = "build";
+    return Tools;
   } else if (route === "Discounts") {
-    icon = "percent";
+    return Discounts;
   } else if (route === "Audience") {
-    icon = "group";
+    return Audience;
   } else if (route === "Appearance") {
-    icon = "palette";
-  } else if (route === "Plugins") {
-    icon = "electric_bolt";
+    return Appearance;
   } else {
-    icon = route;
+    return Plugins;
   }
-
-  return icon;
 };

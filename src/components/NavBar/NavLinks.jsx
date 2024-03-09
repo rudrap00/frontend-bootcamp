@@ -1,22 +1,25 @@
+import { NavLink } from "react-router-dom";
 import { useIcon } from "../../hooks/useIcon";
-import { NavLinkDiv, StyledLink } from "./NavLinks.style";
+import styles from "./NavLinks.module.scss";
 
 export const NavLinks = ({ route }) => {
   const icon = useIcon(route);
 
   return (
     <>
-      <StyledLink
-        className={(isActive) => (isActive ? "active" : "")}
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? styles.link + " " + styles.active : styles.link
+        }
         to={route === "Home" ? "" : route}
       >
-        <NavLinkDiv>
+        <div className={styles.navDiv}>
           <div>
-            <span className="material-symbols-outlined">{icon}</span>
+            <img src={icon} alt="" />
           </div>
           {route}
-        </NavLinkDiv>
-      </StyledLink>
+        </div>
+      </NavLink>
     </>
   );
 };
