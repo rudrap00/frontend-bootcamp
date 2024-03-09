@@ -1,39 +1,37 @@
-import {
-  HeadDiv,
-  Header,
-  HeadingDiv,
-  InfoDiv,
-  MenuDiv,
-  SearchDiv,
-} from "./HeaderBar.style";
+import { useLocation } from "react-router-dom";
+import { Group, Help, Polygon } from "../../assets";
+import styles from "./HeaderBar.module.scss";
 
-export const HeaderBar = ({ page }) => {
+export const HeaderBar = () => {
+  const location = useLocation();
+  const path = location.pathname.replace("/", "");
+
   return (
     <>
-      <Header>
-        <HeadDiv>
-          <HeadingDiv>{page}</HeadingDiv>
-          <InfoDiv>
-            <span className="material-symbols-outlined">help</span>
+      <div className={styles.header}>
+        <div className={styles.head}>
+          <div className={styles.heading}>{path === "" ? "Home" : path}</div>
+          <div className={styles.info}>
+            <img src={Help} alt="" />
             <p>How it works</p>
-          </InfoDiv>
-        </HeadDiv>
-        <SearchDiv>
+          </div>
+        </div>
+        <div className={styles.search}>
           <input
             disabled={true}
             type="text"
             placeholder="Search features, tutorials, etc."
           />
-        </SearchDiv>
-        <MenuDiv>
+        </div>
+        <div className={styles.menu}>
           <div>
-            <span className="material-symbols-outlined">arrow_drop_down</span>
+            <img src={Polygon} alt="" />
           </div>
           <div>
-            <span className="material-symbols-outlined">sms</span>
+            <img src={Group} alt="" />
           </div>
-        </MenuDiv>
-      </Header>
+        </div>
+      </div>
     </>
   );
 };
