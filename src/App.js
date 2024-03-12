@@ -1,5 +1,5 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { NavBar } from "./components/index";
+import { NavBar } from "./components/NavBar/NavBar";
 
 import { Payments } from "./pages/Payments/Payments";
 

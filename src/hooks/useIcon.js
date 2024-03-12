@@ -10,7 +10,7 @@ import {
   Plugins,
   Products,
   Tools,
-} from "../assets/index";
+} from "../assets";
 
 export const useIcon = (route) => {
   if (route === "Home") {

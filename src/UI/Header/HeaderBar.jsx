@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { Group, Help, Polygon } from "../../assets";
+import { Group, Help, Polygon, searchIcon } from "../../assets";
 import styles from "./HeaderBar.module.scss";
 
 export const HeaderBar = () => {
@@ -11,12 +11,17 @@ export const HeaderBar = () => {
       <div className={styles.header}>
         <div className={styles.head}>
           <div className={styles.heading}>{path === "" ? "Home" : path}</div>
-          <div className={styles.info}>
-            <img src={Help} alt="" />
-            <p>How it works</p>
-          </div>
+          {path === "Payments" && (
+            <div className={styles.info}>
+              <img src={Help} alt="" />
+              <p>How it works</p>
+            </div>
+          )}
         </div>
         <div className={styles.search}>
+          <div>
+            <img src={searchIcon} alt="" />
+          </div>
           <input
             disabled={true}
             type="text"

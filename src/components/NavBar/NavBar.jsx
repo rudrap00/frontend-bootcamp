@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
 import { HeaderBar } from "../../UI/Header/HeaderBar";
-import { Wallet } from "../../assets";
+import { dropDown, walletIcon } from "../../assets";
+import { NavLinks } from "../NavLinks/NavLinks";
 import { routes } from "../constants";
 import styles from "./NavBar.module.scss";
-import { NavLinks } from "./NavLinks";
 
 export const NavBar = () => {
   return (
@@ -24,7 +24,7 @@ export const NavBar = () => {
               </div>
             </div>
             <div>
-              <span className="material-symbols-outlined">expand_more</span>
+              <img src={dropDown} alt="" />
             </div>
           </div>
           <div className={styles.pages}>
@@ -36,7 +36,7 @@ export const NavBar = () => {
         <div className={styles.navBottom}>
           <div className={styles.wrapper}>
             <div className={styles.bottomIcon}>
-              <img src={Wallet} alt="" />
+              <img src={walletIcon} alt="" />
             </div>
             <div className={styles.credit}>
               <div>Available Credits</div>
@@ -47,7 +47,9 @@ export const NavBar = () => {
       </div>
       <div className={styles.body}>
         <HeaderBar />
-        <Outlet />
+        <div className={styles.page}>
+          <Outlet />
+        </div>
       </div>
     </>
   );

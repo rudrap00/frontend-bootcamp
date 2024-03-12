@@ -1,8 +1,7 @@
 .navigation {
   position: relative;
-  max-width: 12.5rem;
-  min-width: 12rem;
-  height: 100vh;
+  max-width: 12.1rem;
+  min-height: 100%;
   background-color: #1e2640;
   color: #d2d4d9;
   padding: 1rem 0.5rem;
@@ -65,7 +64,7 @@
         height: 1.25rem;
         justify-self: end;
 
-        span {
+        img {
           color: #ffffff;
           width: 1rem;
           height: auto;
@@ -140,10 +139,20 @@
   }
 }
 
+@media (width >= 900px) {
+  .navigation {
+    max-width: 13rem;
+  }
+}
+
 .body {
   flex-grow: 1;
   width: auto;
   display: flex;
   flex-direction: column;
 
+  .page {
+    padding: 1.6rem;
+    height: 100%;
+  }
 }
