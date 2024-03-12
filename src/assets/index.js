@@ -13,7 +13,12 @@ import Plugins from "./Plugins.svg";
 import Polygon from "./Polygon.svg";
 import Products from "./Products.svg";
 import Tools from "./Tools.svg";
-import Wallet from "./wallet.svg";
+import downloadIcon from "./downloadIcon.svg";
+import dropDown from "./dropDown.svg";
+import infoIcon from "./infoIcon.svg";
+import searchIcon from "./searchIcon.svg";
+import sortIcon from "./sortIcon.svg";
+import walletIcon from "./walletIcon.svg";
 
 export {
   Analytics,
@@ -31,5 +36,10 @@ export {
   Polygon,
   Products,
   Tools,
-  Wallet,
+  downloadIcon,
+  dropDown,
+  infoIcon,
+  searchIcon,
+  sortIcon,
+  walletIcon,
 };
