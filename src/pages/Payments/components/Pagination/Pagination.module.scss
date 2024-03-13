@@ -1,0 +1,19 @@
+.button {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4d4d4d;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.active {
+  background-color: #146eb4;
+  color: #ffffff;
+  font-weight: 500;
+}

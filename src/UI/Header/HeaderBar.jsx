@@ -18,21 +18,22 @@ export const HeaderBar = () => {
             </div>
           )}
         </div>
-        <div className={styles.search}>
+        <div className={`${styles.search} disabled`}>
           <div>
             <img src={searchIcon} alt="" />
           </div>
           <input
+            className="disabled"
             disabled={true}
             type="text"
             placeholder="Search features, tutorials, etc."
           />
         </div>
         <div className={styles.menu}>
-          <div>
+          <div className="disabled">
             <img src={Polygon} alt="" />
           </div>
-          <div>
+          <div className="disabled">
             <img src={Group} alt="" />
           </div>
         </div>

@@ -19,8 +19,8 @@ export const NavBar = () => {
             </div>
             <div>
               <div>Nishyan</div>
-              <div>
-                <a href=".">Visit Store</a>
+              <div className="disabled">
+                <a href="*">Visit Store</a>
               </div>
             </div>
             <div>
