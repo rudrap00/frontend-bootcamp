@@ -1,19 +1,10 @@
-import { useReducer } from "react";
-import { transactionsContext } from "../../context/transactionsContext";
+import ContextProvider from "../../context/transactionsContext";
 import styles from "./Payments.module.scss";
-import {
-  Overview,
-  Transactions,
-  TransactionsHeader,
-  initialState,
-  reducer,
-} from "./components";
+import { Overview, Transactions, TransactionsHeader } from "./components";
 
 export const Payments = () => {
-  const [state, dispatch] = useReducer(reducer, initialState);
-
   return (
-    <transactionsContext.Provider value={{ state, dispatch }}>
+    <ContextProvider>
       <div className={styles.container}>
         <Overview />
         <div className={styles.transactions}>
@@ -26,6 +17,6 @@ export const Payments = () => {
           </div>
         </div>
       </div>
-    </transactionsContext.Provider>
+    </ContextProvider>
   );
 };

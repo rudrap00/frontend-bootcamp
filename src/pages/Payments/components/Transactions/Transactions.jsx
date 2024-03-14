@@ -12,6 +12,10 @@ const Transactions = () => {
     10
   );
 
+  if (pages.length > 0 && currentPage > pages.length) {
+    setCurrentPage(pages.length);
+  }
+
   const nextHandler = () => {
     if (currentPage < pages.length) {
       setCurrentPage((curr) => curr + 1);
@@ -25,11 +29,12 @@ const Transactions = () => {
   };
 
   return (
-    <>
+    <div className={styles.pageContainer}>
       <div className={styles.container}>
-        {arr.map((transaction) => (
-          <Transaction key={transaction.id} {...transaction} />
-        ))}
+        {arr.length > 0 &&
+          arr.map((transaction) => (
+            <Transaction key={transaction.id} {...transaction} />
+          ))}
       </div>
       <div className={styles.pagination}>
         <div className={styles.pageButtons}>
@@ -52,7 +57,7 @@ const Transactions = () => {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
