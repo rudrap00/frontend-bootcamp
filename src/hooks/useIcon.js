@@ -5,6 +5,7 @@ import {
   Delivery,
   Discounts,
   Home,
+  Marketing,
   Orders,
   Payments,
   Plugins,
@@ -21,6 +22,8 @@ export const useIcon = (route) => {
     return Products;
   } else if (route === "Delivery") {
     return Delivery;
+  } else if (route === "Marketing") {
+    return Marketing;
   } else if (route === "Analytics") {
     return Analytics;
   } else if (route === "Payments") {

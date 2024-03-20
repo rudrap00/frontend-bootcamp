@@ -9,7 +9,7 @@ const Transaction = ({ id, date, amount, fees }) => {
       {id.toString().startsWith("") && (
         <div className={styles.container}>
           <div>#{id}</div>
-          <div>{`${day} ${month}, ${year}`}</div>
+          <div>{`${day < 10 ? "0" : ""}${day} ${month}, ${year}`}</div>
           <div>₹{amount.toFixed(2)}</div>
           <div>₹{fees.toFixed(2)}</div>
         </div>

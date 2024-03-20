@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
+import { transactionsContext } from "../../../../context/transactionsContext";
+import { options } from "../constants";
 import styles from "./Overview.module.scss";
 
 const Overview = () => {
+  const { dispatch } = useContext(transactionsContext);
+  const timeChangeHandler = (e) => {
+    dispatch({ type: "time", payload: e.target.value });
+  };
   return (
     <div className={styles.overview}>
       <div className={styles.overviewHead}>
         <div>Overview</div>
         <div>
-          <select name="" id="">
-            <option value="">Last Month</option>
-            <option value="">Last Week</option>
+          <select defaultValue="Today" onChange={timeChangeHandler}>
+            {options.map((opt) => (
+              <option key={opt} value={opt}>
+                {opt}
+              </option>
+            ))}
           </select>
         </div>
       </div>

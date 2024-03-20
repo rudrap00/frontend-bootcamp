@@ -48,7 +48,9 @@ export const NavBar = () => {
       <div className={styles.body}>
         <HeaderBar />
         <div className={styles.page}>
-          <Outlet />
+          <div>
+            <Outlet />
+          </div>
         </div>
       </div>
     </>

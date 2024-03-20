@@ -1,24 +1,26 @@
-import Analytics from "./Analytics.svg";
-import Appearance from "./Appearance.svg";
-import Audience from "./Audience.svg";
-import Delivery from "./Delivery.svg";
-import Discounts from "./Discounts.svg";
-import Group from "./Group.svg";
-import Help from "./Help.svg";
-import Home from "./Home.svg";
-import Marketing from "./Marketing.svg";
-import Orders from "./Orders.svg";
-import Payments from "./Payments.svg";
-import Plugins from "./Plugins.svg";
-import Polygon from "./Polygon.svg";
-import Products from "./Products.svg";
-import Tools from "./Tools.svg";
-import downloadIcon from "./downloadIcon.svg";
-import dropDown from "./dropDown.svg";
-import infoIcon from "./infoIcon.svg";
-import searchIcon from "./searchIcon.svg";
-import sortIcon from "./sortIcon.svg";
-import walletIcon from "./walletIcon.svg";
+import Analytics from "./navIcons/Analytics.svg";
+import Appearance from "./navIcons/Appearance.svg";
+import Audience from "./navIcons/Audience.svg";
+import Delivery from "./navIcons/Delivery.svg";
+import Discounts from "./navIcons/Discounts.svg";
+import Home from "./navIcons/Home.svg";
+import Marketing from "./navIcons/Marketing.svg";
+import Orders from "./navIcons/Orders.svg";
+import Payments from "./navIcons/Payments.svg";
+import Plugins from "./navIcons/Plugins.svg";
+import Products from "./navIcons/Products.svg";
+import Tools from "./navIcons/Tools.svg";
+import dropDown from "./navIcons/dropDown.svg";
+import walletIcon from "./navIcons/walletIcon.svg";
+import Group from "./pageIcons/Group.svg";
+import Help from "./pageIcons/Help.svg";
+import Polygon from "./pageIcons/Polygon.svg";
+import downloadIcon from "./pageIcons/downloadIcon.svg";
+import infoIcon from "./pageIcons/infoIcon.svg";
+import nextIcon from "./pageIcons/nextIcon.svg";
+import previousIcon from "./pageIcons/previousIcon.svg";
+import searchIcon from "./pageIcons/searchIcon.svg";
+import sortIcon from "./pageIcons/sortIcon.svg";
 
 export {
   Analytics,
@@ -39,6 +41,8 @@ export {
   downloadIcon,
   dropDown,
   infoIcon,
+  nextIcon,
+  previousIcon,
   searchIcon,
   sortIcon,
   walletIcon,

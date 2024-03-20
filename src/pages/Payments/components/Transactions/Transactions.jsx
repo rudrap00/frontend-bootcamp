@@ -1,11 +1,12 @@
 import { useContext } from "react";
+import { nextIcon, previousIcon } from "../../../../assets";
 import { transactionsContext } from "../../../../context/transactionsContext";
 import usePagination from "../../../../hooks/usePagination";
 import Pagination from "../Pagination/Pagination";
 import Transaction from "../Transaction/Transaction";
 import styles from "./Transactions.module.scss";
 
-const Transactions = () => {
+const Transactions = ({ tableRef }) => {
   const { state } = useContext(transactionsContext);
   const [arr, pages, currentPage, setCurrentPage] = usePagination(
     state.data,
@@ -17,20 +18,16 @@ const Transactions = () => {
   }
 
   const nextHandler = () => {
-    if (currentPage < pages.length) {
-      setCurrentPage((curr) => curr + 1);
-    }
+    setCurrentPage((curr) => curr + 1);
   };
 
   const previousHandler = () => {
-    if (currentPage > 1) {
-      setCurrentPage((curr) => curr - 1);
-    }
+    setCurrentPage((curr) => curr - 1);
   };
 
   return (
     <div className={styles.pageContainer}>
-      <div className={styles.container}>
+      <div ref={tableRef} className={styles.container}>
         {arr.length > 0 &&
           arr.map((transaction) => (
             <Transaction key={transaction.id} {...transaction} />
@@ -38,8 +35,15 @@ const Transactions = () => {
       </div>
       <div className={styles.pagination}>
         <div className={styles.pageButtons}>
-          <button className={styles.button} onClick={previousHandler}>
-            Previous
+          <button
+            className={styles.button}
+            onClick={previousHandler}
+            disabled={currentPage === 1 || pages.length === 0}
+          >
+            <div>
+              <img src={previousIcon} alt="previousButton" />
+              Previous
+            </div>
           </button>
 
           <div>
@@ -52,8 +56,15 @@ const Transactions = () => {
               />
             ))}
           </div>
-          <button className={styles.button} onClick={nextHandler}>
-            Next
+          <button
+            className={styles.button}
+            onClick={nextHandler}
+            disabled={currentPage === pages.length || pages.length === 0}
+          >
+            <div>
+              Next
+              <img src={nextIcon} alt="nextButton" />
+            </div>
           </button>
         </div>
       </div>

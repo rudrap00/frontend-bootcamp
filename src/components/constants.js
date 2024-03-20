@@ -3,6 +3,7 @@ export const routes = [
   "Orders",
   "Products",
   "Delivery",
+  "Marketing",
   "Analytics",
   "Payments",
   "Tools",

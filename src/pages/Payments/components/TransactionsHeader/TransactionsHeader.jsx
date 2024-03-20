@@ -9,7 +9,7 @@ import {
 import { transactionsContext } from "../../../../context/transactionsContext";
 import styles from "./TransactionsHeader.module.scss";
 
-const TransactionsHeader = () => {
+const TransactionsHeader = ({ pdfDownload }) => {
   const { dispatch } = useContext(transactionsContext);
 
   const searchHandler = (e) => {
@@ -39,7 +39,7 @@ const TransactionsHeader = () => {
           </div>
           <div>
             <button>
-              <img src={downloadIcon} alt="" />
+              <img onClick={pdfDownload} src={downloadIcon} alt="" />
             </button>
           </div>
         </div>
