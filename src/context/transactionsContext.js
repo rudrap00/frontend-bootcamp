@@ -1,8 +1,10 @@
 import { createContext, useReducer } from "react";
 import { transactionsData } from "../pages/Payments/components/constants";
 
+// Create a context for transactions
 export const transactionsContext = createContext();
 
+// Get today's date
 let todayDate = new Date();
 todayDate = new Date(
   todayDate.getFullYear(),
@@ -10,6 +12,7 @@ todayDate = new Date(
   todayDate.getDate()
 );
 
+// Initial state for transactions
 const initialState = {
   originalData: transactionsData.filter(
     ({ date }) => date.getTime() >= todayDate.getTime()
@@ -22,19 +25,22 @@ const initialState = {
   timeWindow: "Today",
 };
 
+// Reducer function to handle state changes
 const reducer = (state, action) => {
   let searchString = state.str;
   let dateWiseData = state.originalData;
   let timeFrame = state.timeWindow;
 
+  // Handling different action types
   if (action.type === "time") {
+    // Update timeFrame based on payload
     timeFrame = action.payload;
-    const TODAY = new Date();
-    const YEAR = TODAY.getFullYear();
-    const MONTH = TODAY.getMonth();
-    const DAY = TODAY.getDay();
+    const YEAR = todayDate.getFullYear();
+    const MONTH = todayDate.getMonth();
+    const DAY = todayDate.getDay();
     const TIME = todayDate.getTime();
 
+    // Filter data based on selected time frame
     if (timeFrame === "All") {
       dateWiseData = transactionsData;
     } else if (timeFrame === "This Year") {
@@ -75,8 +81,10 @@ const reducer = (state, action) => {
       );
     }
   } else if (action.type === "sort") {
+    // Toggle between sorting options
     const switchVal = (state.switch + 1) % 3;
 
+    // Sort data based on switch value
     if (switchVal === 0) {
       return {
         ...state,
@@ -96,13 +104,16 @@ const reducer = (state, action) => {
       };
     }
   } else if (action.type === "search") {
+    // Update search string
     searchString = action.payload;
   }
 
+  // Filter data based on search string
   const filteredData = dateWiseData.filter((item) =>
     item.id.startsWith(searchString)
   );
 
+  // Return updated state based on switch value
   if (state.switch === 0) {
     return {
       ...state,
@@ -130,9 +141,11 @@ const reducer = (state, action) => {
   }
 };
 
+// Context provider component
 const TransactionsContextProvider = (props) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  // Provide state and dispatch function to children components
   return (
     <transactionsContext.Provider value={{ state, dispatch }}>
       {props.children}

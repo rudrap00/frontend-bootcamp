@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { HeaderBar } from "../../UI/Header/HeaderBar";
-import { dropDown, walletIcon } from "../../assets";
+import { Logo, dropDown, walletIcon } from "../../assets";
 import { NavLinks } from "../NavLinks/NavLinks";
 import { routes } from "../constants";
 import styles from "./NavBar.module.scss";
@@ -12,10 +12,7 @@ export const NavBar = () => {
         <div className={styles.navTop}>
           <div className={styles.iconDiv}>
             <div>
-              <img
-                src="https://s3-alpha-sig.figma.com/img/18ef/52d9/1494ed3109e53ab9db09579cd5d8839e?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NS-DWb7NG9M6pY5VDbmCkPiUja90lR4tz7-JnXHGknUYUpr4MTDOccXbGqgCtflOknsh5RDmIlQ1KjGp~UaCzlgUB1z4tNxyk2wI65q49CC15ll0s-lUmSOKRKI2uHKh4xNypD8SPJb6Ur0Ld-yFMr3eRpeRftTYxMcngPcm5zYrDT~7ZRSJwD~OVoe--CRrtvtu7aOFe85wfAtvH0Jmwy~IfQReucLRHqSIl4~HXvyN4Scu7zStgM9DHlCgnpwtn~~sUwit7PIWoqdrkzASnpjJaDuAMSrtSPuQnFSKug3HoH-NBjMxfauxjZ64mQdyDcNDQ~xVsWkoCpbdzONaXg__"
-                alt="Logo/Icon"
-              />
+              <img src={Logo} alt="" />
             </div>
             <div>
               <div>Nishyan</div>

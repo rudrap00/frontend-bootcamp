@@ -1,3 +1,4 @@
+import Logo from "./Images/Image.jpg";
 import Analytics from "./navIcons/Analytics.svg";
 import Appearance from "./navIcons/Appearance.svg";
 import Audience from "./navIcons/Audience.svg";
@@ -31,6 +32,7 @@ export {
   Group,
   Help,
   Home,
+  Logo,
   Marketing,
   Orders,
   Payments,

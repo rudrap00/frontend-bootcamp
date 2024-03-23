@@ -9,20 +9,26 @@ import {
 import { transactionsContext } from "../../../../context/transactionsContext";
 import styles from "./TransactionsHeader.module.scss";
 
+// TransactionsHeader component
 const TransactionsHeader = ({ pdfDownload }) => {
+  // Access transactions context
   const { dispatch } = useContext(transactionsContext);
 
+  // Handler for search input
   const searchHandler = (e) => {
     dispatch({ type: "search", payload: e.target.value });
   };
 
+  // Handler for sort button
   const sortHandler = () => {
     dispatch({ type: "sort" });
   };
 
+  // Render component
   return (
     <>
       <div className={styles.tableFunc}>
+        {/* Search bar */}
         <div className={styles.search}>
           <img src={searchIcon} alt="" />
           <input
@@ -31,6 +37,7 @@ const TransactionsHeader = ({ pdfDownload }) => {
             placeholder="Search by order ID"
           />
         </div>
+        {/* Sort and download buttons */}
         <div className={styles.buttons}>
           <div>
             <button onClick={sortHandler}>
@@ -44,6 +51,7 @@ const TransactionsHeader = ({ pdfDownload }) => {
           </div>
         </div>
       </div>
+      {/* Table header */}
       <div className={styles.tableHeader}>
         <div>Order ID</div>
         <div>

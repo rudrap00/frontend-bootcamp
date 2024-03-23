@@ -13,7 +13,9 @@ import {
   Tools,
 } from "../assets";
 
+// Custom hook to retrieve icon based on route
 export const useIcon = (route) => {
+  // Determine which icon to return based on route
   if (route === "Home") {
     return Home;
   } else if (route === "Orders") {

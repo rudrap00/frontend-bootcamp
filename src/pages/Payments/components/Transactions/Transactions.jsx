@@ -6,35 +6,35 @@ import Pagination from "../Pagination/Pagination";
 import Transaction from "../Transaction/Transaction";
 import styles from "./Transactions.module.scss";
 
+// Transactions component
 const Transactions = ({ tableRef }) => {
+  // Access transactions context
   const { state } = useContext(transactionsContext);
-  const [arr, pages, currentPage, setCurrentPage] = usePagination(
-    state.data,
-    10
-  );
 
-  if (pages.length > 0 && currentPage > pages.length) {
-    setCurrentPage(pages.length);
-  }
+  // Pagination hook to manage data pagination
+  const [
+    arr,
+    pages,
+    nextHandler,
+    previousHandler,
+    currentPage,
+    setCurrentPage,
+  ] = usePagination(state.data, 10);
 
-  const nextHandler = () => {
-    setCurrentPage((curr) => curr + 1);
-  };
-
-  const previousHandler = () => {
-    setCurrentPage((curr) => curr - 1);
-  };
-
+  // Render component
   return (
     <div className={styles.pageContainer}>
       <div ref={tableRef} className={styles.container}>
+        {/* Render transactions */}
         {arr.length > 0 &&
           arr.map((transaction) => (
             <Transaction key={transaction.id} {...transaction} />
           ))}
       </div>
+      {/* Pagination section */}
       <div className={styles.pagination}>
         <div className={styles.pageButtons}>
+          {/* Previous button */}
           <button
             className={styles.button}
             onClick={previousHandler}
@@ -45,7 +45,7 @@ const Transactions = ({ tableRef }) => {
               Previous
             </div>
           </button>
-
+          {/* Pagination buttons */}
           <div>
             {pages.map((page) => (
               <Pagination
@@ -56,6 +56,7 @@ const Transactions = ({ tableRef }) => {
               />
             ))}
           </div>
+          {/* Next button */}
           <button
             className={styles.button}
             onClick={nextHandler}

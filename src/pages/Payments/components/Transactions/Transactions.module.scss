@@ -38,6 +38,10 @@
         font-weight: 500;
         padding: 0.75rem 0.375rem;
 
+        &:hover {
+          cursor: pointer;
+        }
+
         &:disabled {
           opacity: 60%;
           cursor: not-allowed;
