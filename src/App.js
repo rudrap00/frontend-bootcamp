@@ -1,7 +1,8 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import "./App.css";
 import { NavBar } from "./components/NavBar/NavBar";
-
-import { Payments } from "./pages/Payments/Payments";
+import TransactionsContextProvider from "./context/transactionsContext";
+import Payments from "./pages/Payments/Payments";
 
 const router = createBrowserRouter([
   {
@@ -9,22 +10,25 @@ const router = createBrowserRouter([
     element: <NavBar />,
     children: [
       { index: true, element: <></> },
-      { path: "orders", element: <></> },
-      { path: "products", element: <></> },
-      { path: "delivery", element: <></> },
-      { path: "analytics", element: <></> },
-      { path: "payments", element: <Payments /> },
-      { path: "tools", element: <></> },
-      { path: "discounts", element: <></> },
-      { path: "audience", element: <></> },
-      { path: "appearance", element: <></> },
-      { path: "plugins", element: <></> },
+      {
+        path: "payments",
+        element: (
+          <TransactionsContextProvider>
+            <Payments />
+          </TransactionsContextProvider>
+        ),
+      },
+      { path: "*", element: <></> },
     ],
   },
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <div className="App">
+      <RouterProvider router={router} />
+    </div>
+  );
 }
 
 export default App;

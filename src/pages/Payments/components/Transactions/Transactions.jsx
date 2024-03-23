@@ -1,47 +1,51 @@
 import { useContext } from "react";
+import { nextIcon, previousIcon } from "../../../../assets";
 import { transactionsContext } from "../../../../context/transactionsContext";
 import usePagination from "../../../../hooks/usePagination";
 import Pagination from "../Pagination/Pagination";
 import Transaction from "../Transaction/Transaction";
 import styles from "./Transactions.module.scss";
 
-const Transactions = () => {
+// Transactions component
+const Transactions = ({ tableRef }) => {
+  // Access transactions context
   const { state } = useContext(transactionsContext);
-  const [arr, pages, currentPage, setCurrentPage] = usePagination(
-    state.data,
-    10
-  );
 
-  if (pages.length > 0 && currentPage > pages.length) {
-    setCurrentPage(pages.length);
-  }
+  // Pagination hook to manage data pagination
+  const [
+    arr,
+    pages,
+    nextHandler,
+    previousHandler,
+    currentPage,
+    setCurrentPage,
+  ] = usePagination(state.data, 10);
 
-  const nextHandler = () => {
-    if (currentPage < pages.length) {
-      setCurrentPage((curr) => curr + 1);
-    }
-  };
-
-  const previousHandler = () => {
-    if (currentPage > 1) {
-      setCurrentPage((curr) => curr - 1);
-    }
-  };
-
+  // Render component
   return (
     <div className={styles.pageContainer}>
-      <div className={styles.container}>
+      <div ref={tableRef} className={styles.container}>
+        {/* Render transactions */}
         {arr.length > 0 &&
           arr.map((transaction) => (
             <Transaction key={transaction.id} {...transaction} />
           ))}
       </div>
+      {/* Pagination section */}
       <div className={styles.pagination}>
         <div className={styles.pageButtons}>
-          <button className={styles.button} onClick={previousHandler}>
-            Previous
+          {/* Previous button */}
+          <button
+            className={styles.button}
+            onClick={previousHandler}
+            disabled={currentPage === 1 || pages.length === 0}
+          >
+            <div>
+              <img src={previousIcon} alt="previousButton" />
+              Previous
+            </div>
           </button>
-
+          {/* Pagination buttons */}
           <div>
             {pages.map((page) => (
               <Pagination
@@ -52,8 +56,16 @@ const Transactions = () => {
               />
             ))}
           </div>
-          <button className={styles.button} onClick={nextHandler}>
-            Next
+          {/* Next button */}
+          <button
+            className={styles.button}
+            onClick={nextHandler}
+            disabled={currentPage === pages.length || pages.length === 0}
+          >
+            <div>
+              Next
+              <img src={nextIcon} alt="nextButton" />
+            </div>
           </button>
         </div>
       </div>

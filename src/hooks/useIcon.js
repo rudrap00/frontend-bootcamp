@@ -5,6 +5,7 @@ import {
   Delivery,
   Discounts,
   Home,
+  Marketing,
   Orders,
   Payments,
   Plugins,
@@ -12,7 +13,9 @@ import {
   Tools,
 } from "../assets";
 
+// Custom hook to retrieve icon based on route
 export const useIcon = (route) => {
+  // Determine which icon to return based on route
   if (route === "Home") {
     return Home;
   } else if (route === "Orders") {
@@ -21,6 +24,8 @@ export const useIcon = (route) => {
     return Products;
   } else if (route === "Delivery") {
     return Delivery;
+  } else if (route === "Marketing") {
+    return Marketing;
   } else if (route === "Analytics") {
     return Analytics;
   } else if (route === "Payments") {
