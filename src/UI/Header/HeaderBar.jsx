@@ -10,7 +10,9 @@ export const HeaderBar = () => {
     <>
       <div className={styles.header}>
         <div className={styles.head}>
-          <div className={styles.heading}>{path === "" ? "Home" : path}</div>
+          <div className={styles.heading}>
+            {path === "frontend-bootcamp" ? "Home" : path}
+          </div>
           {path === "Payments" && (
             <div className={styles.info}>
               <img src={Help} alt="" />
