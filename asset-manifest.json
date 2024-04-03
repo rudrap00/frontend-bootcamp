@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/frontend-bootcamp/static/css/main.77c988b7.css",
+    "main.js": "/frontend-bootcamp/static/js/main.34995814.js",
+    "static/js/213.b0f107bc.chunk.js": "/frontend-bootcamp/static/js/213.b0f107bc.chunk.js",
+    "static/js/732.ef8619b7.chunk.js": "/frontend-bootcamp/static/js/732.ef8619b7.chunk.js",
+    "static/media/Discounts.svg": "/frontend-bootcamp/static/media/Discounts.a9566576cf859b5ddb03076d32d2490f.svg",
+    "static/media/Audience.svg": "/frontend-bootcamp/static/media/Audience.4a7f0ad9ebdeaf11c77e2ee6f2a2d1a5.svg",
+    "static/media/Orders.svg": "/frontend-bootcamp/static/media/Orders.4d7c71d675605cd19109a6b92ff0e9be.svg",
+    "static/media/Help.svg": "/frontend-bootcamp/static/media/Help.b630f8eb184830ca7ce8cc95c307cbb1.svg",
+    "static/media/Delivery.svg": "/frontend-bootcamp/static/media/Delivery.3895b74d32737e4ef8b7b8ff541a7cf5.svg",
+    "static/media/Home.svg": "/frontend-bootcamp/static/media/Home.305e63775d2992ec241678d5823a94fd.svg",
+    "static/media/Appearance.svg": "/frontend-bootcamp/static/media/Appearance.d873d5b2e574c05fcd0e07f81892ee08.svg",
+    "static/media/sortIcon.svg": "/frontend-bootcamp/static/media/sortIcon.f630817b79a6cffe385c69656da06f62.svg",
+    "static/media/Analytics.svg": "/frontend-bootcamp/static/media/Analytics.c66f62274c1db9eb020d4d8900f789f3.svg",
+    "static/media/Marketing.svg": "/frontend-bootcamp/static/media/Marketing.0508a3d54fc7ae82b5bbfd48003b3d4f.svg",
+    "static/media/downloadIcon.svg": "/frontend-bootcamp/static/media/downloadIcon.11f9dc150d5c84923fb6dd3a5f838cfc.svg",
+    "static/media/Products.svg": "/frontend-bootcamp/static/media/Products.314d6d149385f1c544cb4d54d0d27fac.svg",
+    "static/media/Group.svg": "/frontend-bootcamp/static/media/Group.7313b6b56f53503e0ec1af7c6949684e.svg",
+    "static/media/infoIcon.svg": "/frontend-bootcamp/static/media/infoIcon.974b70a5b669d4ca519d9a635505ae11.svg",
+    "static/media/walletIcon.svg": "/frontend-bootcamp/static/media/walletIcon.b5e0942b14b3035d63d46158b11ee544.svg",
+    "static/media/Tools.svg": "/frontend-bootcamp/static/media/Tools.fc47959abf67cf9c28f76030d391c3a1.svg",
+    "static/media/Plugins.svg": "/frontend-bootcamp/static/media/Plugins.354709aca99ead6d307f3703d5eac259.svg",
+    "index.html": "/frontend-bootcamp/index.html",
+    "static/media/Payments.svg": "/frontend-bootcamp/static/media/Payments.3842bd1546081f95a8c17f50b44e71cb.svg",
+    "static/media/searchIcon.svg": "/frontend-bootcamp/static/media/searchIcon.48bf81005634a2905b0bdeb1b3269c68.svg",
+    "static/media/previousIcon.svg": "/frontend-bootcamp/static/media/previousIcon.270447c446f52f83bbcf2040be8e957d.svg",
+    "static/media/nextIcon.svg": "/frontend-bootcamp/static/media/nextIcon.f367989f0ebeb2e607d52507190adcbf.svg",
+    "static/media/dropDown.svg": "/frontend-bootcamp/static/media/dropDown.0964decb79ed24be6a526a943570c834.svg",
+    "static/media/Polygon.svg": "/frontend-bootcamp/static/media/Polygon.008c6c78f3416dff41ec3cbef9a5b0b7.svg",
+    "main.77c988b7.css.map": "/frontend-bootcamp/static/css/main.77c988b7.css.map",
+    "main.34995814.js.map": "/frontend-bootcamp/static/js/main.34995814.js.map",
+    "213.b0f107bc.chunk.js.map": "/frontend-bootcamp/static/js/213.b0f107bc.chunk.js.map",
+    "732.ef8619b7.chunk.js.map": "/frontend-bootcamp/static/js/732.ef8619b7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.77c988b7.css",
+    "static/js/main.34995814.js"
+  ]
+}
