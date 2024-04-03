@@ -4,7 +4,7 @@ import styles from "./HeaderBar.module.scss";
 
 export const HeaderBar = () => {
   const location = useLocation();
-  const path = location.pathname.replace("/", "");
+  const path = location.pathname.replaceAll("/", "");
 
   return (
     <>
