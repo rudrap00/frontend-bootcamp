@@ -1,10 +1,10 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import "./App.css";
 import { NavBar } from "./components/NavBar/NavBar";
 import TransactionsContextProvider from "./context/transactionsContext";
 import Payments from "./pages/Payments/Payments";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <NavBar />,

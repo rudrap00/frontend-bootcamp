@@ -11,7 +11,7 @@ export const NavLinks = ({ route }) => {
         className={({ isActive }) =>
           isActive ? styles.link + " " + styles.active : styles.link
         }
-        to={route === "Home" ? "/frontend-bootcamp" : route}
+        to={route === "Home" ? "/" : route}
       >
         <div className={styles.navDiv}>
           <div>
