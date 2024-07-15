@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/frontend-bootcamp/static/css/main.77c988b7.css",
-    "main.js": "/frontend-bootcamp/static/js/main.7e4a3788.js",
+    "main.js": "/frontend-bootcamp/static/js/main.1c34c036.js",
     "static/js/213.b0f107bc.chunk.js": "/frontend-bootcamp/static/js/213.b0f107bc.chunk.js",
     "static/js/732.ef8619b7.chunk.js": "/frontend-bootcamp/static/js/732.ef8619b7.chunk.js",
     "static/media/Discounts.svg": "/frontend-bootcamp/static/media/Discounts.a9566576cf859b5ddb03076d32d2490f.svg",
@@ -29,12 +29,12 @@
     "static/media/dropDown.svg": "/frontend-bootcamp/static/media/dropDown.0964decb79ed24be6a526a943570c834.svg",
     "static/media/Polygon.svg": "/frontend-bootcamp/static/media/Polygon.008c6c78f3416dff41ec3cbef9a5b0b7.svg",
     "main.77c988b7.css.map": "/frontend-bootcamp/static/css/main.77c988b7.css.map",
-    "main.7e4a3788.js.map": "/frontend-bootcamp/static/js/main.7e4a3788.js.map",
+    "main.1c34c036.js.map": "/frontend-bootcamp/static/js/main.1c34c036.js.map",
     "213.b0f107bc.chunk.js.map": "/frontend-bootcamp/static/js/213.b0f107bc.chunk.js.map",
     "732.ef8619b7.chunk.js.map": "/frontend-bootcamp/static/js/732.ef8619b7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.77c988b7.css",
-    "static/js/main.7e4a3788.js"
+    "static/js/main.1c34c036.js"
   ]
 }
